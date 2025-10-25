@@ -1,0 +1,456 @@
+/* Ledgerly App Theme - Matches Desktop Application */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Color Variables - Matching App Theme */
+:root {
+    /* Brand Background Colors */
+    --brand-bg: #202120;
+    --window-main: #272A28;
+    --window-sidebar: #202221;
+    --window-header: #242625;
+    --shade-1: #252625;
+    --shade-2: #282A28;
+    --shade-3: #2A2B2B;
+
+    /* Brand Accent Colors */
+    --brand-primary: #936954;
+    --brand-secondary: #4C554B;
+    --text-active: #ffffff;
+    --text-passive: #A39C83;
+
+    /* Special Functions */
+    --special-accent: #394050;
+    --cancel-button: #6C727F;
+
+    /* Computed Colors */
+    --brand-primary-hover: #a47762;
+    --brand-primary-active: #82593d;
+
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-passive);
+    background: var(--brand-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-active);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+header {
+    background: var(--window-header);
+    color: var(--text-active);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border-bottom: 2px solid var(--brand-primary);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+    color: var(--text-active);
+}
+
+.tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-passive);
+}
+
+header a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--brand-primary);
+    transition: all 0.2s ease;
+}
+
+header a:hover {
+    color: var(--brand-primary-hover);
+    border-bottom-color: var(--brand-primary-hover);
+}
+
+/* Main Content */
+main {
+    padding: 3rem 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.125rem;
+    color: var(--text-passive);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Download Section */
+.download-section {
+    background: var(--window-main);
+    border: 1px solid var(--shade-2);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.download-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-active);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.download-section > p {
+    color: var(--text-passive);
+}
+
+.platform-downloads {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.platform-card {
+    background: var(--window-sidebar);
+    border: 1px solid var(--shade-1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    border-color: var(--brand-primary);
+}
+
+.platform-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.platform-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-active);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.platform-card p {
+    color: var(--text-passive);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--brand-primary);
+    color: var(--text-active);
+    border: 2px solid var(--brand-primary);
+}
+
+.btn-primary:hover {
+    background: var(--brand-primary-hover);
+    border-color: var(--brand-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:active {
+    background: var(--brand-primary-active);
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--brand-primary);
+    border: 2px solid var(--brand-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--brand-primary);
+    color: var(--text-active);
+}
+
+.btn-cancel {
+    background: var(--cancel-button);
+    color: var(--text-active);
+    border: 2px solid var(--cancel-button);
+    opacity: 0.8;
+}
+
+.btn-cancel:hover {
+    opacity: 1;
+}
+
+/* Installation Instructions */
+.installation {
+    background: var(--window-sidebar);
+    border: 1px solid var(--shade-1);
+    border-left: 4px solid var(--brand-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.installation h3 {
+    margin-bottom: 1rem;
+    color: var(--text-active);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+}
+
+.installation ol {
+    margin-left: 1.5rem;
+    color: var(--text-passive);
+}
+
+.installation ol li {
+    margin: 0.75rem 0;
+    line-height: 1.7;
+}
+
+.installation ol li strong {
+    color: var(--text-active);
+    font-weight: 600;
+}
+
+.installation code {
+    background: var(--brand-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: var(--brand-primary);
+    border: 1px solid var(--shade-2);
+}
+
+/* System Requirements */
+.system-requirements {
+    background: var(--special-accent);
+    border: 1px solid var(--brand-secondary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.system-requirements h3 {
+    color: var(--text-active);
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+}
+
+.system-requirements ul {
+    list-style: none;
+    padding-left: 0;
+    color: var(--text-passive);
+}
+
+.system-requirements li {
+    padding: 0.25rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.system-requirements li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--brand-primary);
+    font-weight: bold;
+}
+
+/* About/Feature Sections */
+.about {
+    background: var(--window-main);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--shade-2);
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+    color: var(--text-active);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.875rem;
+}
+
+.about h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-active);
+}
+
+.about p {
+    margin-bottom: 1rem;
+    color: var(--text-passive);
+    line-height: 1.8;
+}
+
+.about ul {
+    margin-top: 1rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.about li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-passive);
+    line-height: 1.7;
+}
+
+.about li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--brand-primary);
+    font-weight: bold;
+}
+
+.about ul[style*="list-style: disc"] {
+    list-style: none;
+}
+
+.about ul[style*="list-style: disc"] li::before {
+    content: "•";
+    color: var(--brand-primary);
+}
+
+.about ol {
+    margin-left: 1.5rem;
+    color: var(--text-passive);
+}
+
+.about ol li {
+    margin: 0.5rem 0;
+    line-height: 1.7;
+    padding-left: 0.5rem;
+}
+
+.about strong {
+    color: var(--text-active);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: var(--window-header);
+    color: var(--text-passive);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid var(--brand-primary);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+footer a:hover {
+    border-bottom-color: var(--brand-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .platform-downloads {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .about {
+        padding: 1.5rem;
+    }
+}
+
+/* Scrollbar Styling (WebKit browsers) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--brand-primary);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-primary-hover);
+}
+
+/* Selection Color */
+::selection {
+    background: var(--brand-primary);
+    color: var(--text-active);
+}
+
+::-moz-selection {
+    background: var(--brand-primary);
+    color: var(--text-active);
+}
