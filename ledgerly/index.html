@@ -3,139 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ledgerly - Treasury Management Application</title>
+    <title>Ledgerly - Secure Treasury Management</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/ledgerly.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="nav-bar">
         <div class="container">
-            <h1>Ledgerly</h1>
-            <p class="tagline">Secure Treasury Management for Clubs & Organizations</p>
-            <p style="margin-top: 1.5rem; font-size: 1rem;">
-                <a href="../">← Back to all apps</a> •
-                <a href="#features">Features</a> •
-                <a href="#support">Support</a>
-            </p>
+            <div class="nav-content">
+                <div class="nav-brand">Ledgerly</div>
+                <div class="nav-links">
+                    <a href="#download">Download</a>
+                    <a href="features.html">Features</a>
+                    <a href="guide.html">Guide</a>
+                    <a href="../">All Apps</a>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <section class="intro fade-in">
-            <p>
-                Track income, expenses, and generate beautiful reports—all stored locally on your machine.
-                100% local storage. No cloud. Complete privacy.
-            </p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Ledgerly</h1>
+                <p class="hero-subtitle">Treasury Management for Clubs & Organizations</p>
+                <p class="hero-description">
+                    Track finances locally. No cloud. Complete privacy.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary btn-large">
+                        <i class="fa-solid fa-download"></i> Download Now
+                    </a>
+                    <a href="features.html" class="btn btn-secondary btn-large">
+                        <i class="fa-solid fa-star"></i> See Features
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="download" class="download-section fade-in">
-            <h2>Download Ledgerly v1.0</h2>
-            <p style="margin-bottom: 2rem;">
-                No installation required - just download and run!
-            </p>
+    <!-- Quick Features -->
+    <section class="quick-features">
+        <div class="container">
+            <div class="features-grid-compact">
+                <div class="feature-item">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>100% Local Storage</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span>Excel Based</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Beautiful Reports</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Error Prevention</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="platform-downloads">
-                <div class="platform-card">
-                    <div class="platform-icon">
+    <!-- Download Section -->
+    <section id="download" class="download-hero">
+        <div class="container">
+            <h2>Get Started</h2>
+            <p class="download-subtitle">Choose your platform and start tracking your treasury</p>
+
+            <div class="platform-downloads-hero">
+                <div class="platform-card-hero">
+                    <div class="platform-icon-large">
                         <i class="fa-brands fa-windows"></i>
                     </div>
                     <h3>Windows</h3>
-                    <p>Windows 10 or later</p>
-                    <a href="#" class="btn btn-primary">Download .exe</a>
-                    <p style="margin-top: 0.5rem; font-size: 0.75rem;">Coming Soon</p>
+                    <p>Windows 10+</p>
+                    <a href="#" class="btn btn-primary btn-download">
+                        <i class="fa-solid fa-download"></i> Download .exe
+                    </a>
+                    <span class="coming-soon-badge">Coming Soon</span>
                 </div>
 
-                <div class="platform-card">
-                    <div class="platform-icon">
+                <div class="platform-card-hero">
+                    <div class="platform-icon-large">
                         <i class="fa-brands fa-apple"></i>
                     </div>
                     <h3>macOS</h3>
-                    <p>macOS 10.14 or later</p>
-                    <a href="#" class="btn btn-primary">Download .app</a>
-                    <p style="margin-top: 0.5rem; font-size: 0.75rem;">Coming Soon</p>
+                    <p>macOS 10.14+</p>
+                    <a href="#" class="btn btn-primary btn-download">
+                        <i class="fa-solid fa-download"></i> Download .app
+                    </a>
+                    <span class="coming-soon-badge">Coming Soon</span>
                 </div>
             </div>
 
-            <div class="installation">
-                <h3>Quick Start</h3>
-                <ol>
-                    <li><strong>Windows:</strong> Download and run. Click "More info" and "Run anyway" if SmartScreen appears.</li>
-                    <li><strong>macOS:</strong> Download, move to Applications, right-click → Open the first time.</li>
-                </ol>
+            <div class="quick-start-note">
+                <i class="fa-solid fa-circle-info"></i>
+                No installation required • Just download and run • Works completely offline
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="features" class="features-highlight fade-in">
-            <h2>Why Ledgerly?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-lock"></i>
-                    </div>
-                    <h3>100% Local</h3>
-                    <p>Your data never leaves your machine. No cloud sync, no external servers.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-chart-pie"></i>
-                    </div>
-                    <h3>Beautiful Reports</h3>
-                    <p>Interactive charts and markdown exports for professional reporting.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3>Error Prevention</h3>
-                    <p>Real-time validation and confirmation dialogs prevent costly mistakes.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-file-excel"></i>
-                    </div>
-                    <h3>Excel Based</h3>
-                    <p>Data stored in Excel files for easy backup and portability.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="support">
+    <!-- Why Section -->
+    <section class="why-section">
         <div class="container">
-            <div class="footer-nav">
-                <div class="footer-section">
+            <h2>Why Ledgerly?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3>Your Data, Your Machine</h3>
+                    <p>All financial data stays on your computer. No cloud sync, no external servers, no data collection.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3>Fast & Reliable</h3>
+                    <p>Built with Python and Excel for speed and reliability. Works offline, always.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Beautiful Interface</h3>
+                    <p>Modern dark theme with intuitive design. Visual indicators prevent costly mistakes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Ledgerly</h4>
+                    <p>Secure treasury management for clubs and organizations.</p>
+                </div>
+                <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="features.html">Full Features List</a></li>
+                        <li><a href="features.html">Features</a></li>
                         <li><a href="guide.html">User Guide</a></li>
                         <li><a href="troubleshooting.html">Troubleshooting</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>System Requirements</h4>
+                <div class="footer-col">
+                    <h4>Requirements</h4>
                     <ul>
-                        <li>Windows 10+ or macOS 10.14+</li>
-                        <li>512 MB RAM minimum</li>
-                        <li>100 MB free space</li>
-                        <li>Works completely offline</li>
+                        <li>Windows 10+ / macOS 10.14+</li>
+                        <li>512 MB RAM</li>
+                        <li>100 MB storage</li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Technical</h4>
+                <div class="footer-col">
+                    <h4>Connect</h4>
                     <ul>
-                        <li>Built with CustomTkinter</li>
-                        <li>Plotly visualizations</li>
-                        <li>Python 3.8+</li>
-                        <li>MIT License</li>
+                        <li><a href="../">All Apps</a></li>
+                        <li><a href="https://github.com/LordPam" target="_blank">GitHub</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Joshua Sullivan. Built with Python & PyInstaller.</p>
-                <p>
-                    <a href="../">All Apps</a> •
-                    <a href="https://github.com/LordPam" target="_blank">GitHub</a>
-                </p>
+                <p>&copy; 2025 Joshua Sullivan • Built with Python & PyInstaller</p>
             </div>
         </div>
     </footer>
