@@ -500,36 +500,36 @@ footer {
 
 /* Page Hero (for subpages) */
 .page-hero {
-    padding: 9rem 0 4rem;
+    padding: 8rem 0 3rem;
     text-align: center;
-    background: linear-gradient(180deg, var(--brand-bg) 0%, var(--window-main) 100%);
+    background: var(--brand-bg);
 }
 
 .page-hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
 }
 
 .page-hero p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--text-secondary);
     font-weight: 400;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 /* Features Content */
 .features-content {
-    padding: 6rem 0;
-    max-width: 1100px;
+    padding: 5rem 0;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .feature-section {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .feature-section:last-child {
@@ -542,88 +542,54 @@ footer {
 }
 
 .feature-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
-    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
 }
 
 .feature-header p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .feature-item {
-    background: rgba(39, 42, 40, 0.4);
-    border: 1px solid rgba(147, 105, 84, 0.15);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-    border-color: rgba(147, 105, 84, 0.3);
-    background: rgba(39, 42, 40, 0.6);
-    transform: translateY(-2px);
+    padding: 0;
 }
 
 .feature-item h3 {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .feature-item p {
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: 1rem;
-}
-
-.feature-item ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.feature-item li {
-    color: var(--text-secondary);
-    font-size: 0.9375rem;
-    padding-left: 1.5rem;
-    position: relative;
-    line-height: 1.6;
-}
-
-.feature-item li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.6em;
-    width: 5px;
-    height: 5px;
-    background: var(--brand-primary);
-    border-radius: 50%;
+    max-width: 70ch;
 }
 
 /* Guide Content */
 .guide-content {
-    padding: 6rem 0;
-    max-width: 900px;
+    padding: 5rem 0;
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .guide-section {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 .guide-section:last-child {
@@ -631,19 +597,22 @@ footer {
 }
 
 .guide-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 3rem;
-    letter-spacing: -0.02em;
-    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.01em;
+}
+
+.guide-section > p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 .guide-step {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    position: relative;
+    margin-bottom: 2.5rem;
 }
 
 .guide-step:last-child {
@@ -651,33 +620,29 @@ footer {
 }
 
 .step-number {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, var(--brand-primary) 0%, #a47762 100%);
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: var(--brand-primary);
     color: var(--text-primary);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.125rem;
-}
-
-.step-content {
-    flex: 1;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
 }
 
 .step-content h3 {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .step-content p {
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: 1rem;
     margin-bottom: 1rem;
 }
@@ -685,28 +650,24 @@ footer {
 .step-content ul {
     list-style: none;
     padding: 0;
-    display: grid;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .step-content li {
     color: var(--text-secondary);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     padding-left: 1.5rem;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
 }
 
 .step-content li::before {
-    content: "";
+    content: "•";
     position: absolute;
-    left: 0;
-    top: 0.6em;
-    width: 5px;
-    height: 5px;
-    background: var(--brand-primary);
-    border-radius: 50%;
+    left: 0.5rem;
+    color: var(--brand-primary);
+    font-weight: bold;
 }
 
 .step-content strong {
@@ -716,42 +677,39 @@ footer {
 
 /* Best Practices Grid */
 .best-practices-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .practice-card {
-    background: rgba(39, 42, 40, 0.4);
-    border: 1px solid rgba(147, 105, 84, 0.15);
-    border-radius: 12px;
-    padding: 1.75rem;
-    transition: all 0.3s ease;
-}
-
-.practice-card:hover {
-    border-color: rgba(147, 105, 84, 0.3);
-    background: rgba(39, 42, 40, 0.6);
-    transform: translateY(-2px);
+    padding: 0;
 }
 
 .practice-card h3 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.practice-card h3::before {
+    content: "✓ ";
+    color: var(--brand-primary);
+    font-weight: bold;
+    margin-right: 0.5rem;
 }
 
 .practice-card p {
     color: var(--text-secondary);
-    font-size: 0.9375rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 /* Excel Format Table */
 .excel-format {
-    margin-top: 3rem;
+    margin-top: 2rem;
     overflow-x: auto;
 }
 
@@ -761,22 +719,24 @@ footer {
 }
 
 .excel-format thead {
-    border-bottom: 1px solid rgba(147, 105, 84, 0.2);
+    border-bottom: 2px solid rgba(147, 105, 84, 0.3);
 }
 
 .excel-format th {
     text-align: left;
-    padding: 1.25rem 0;
+    padding: 0.75rem 1rem 0.75rem 0;
     font-weight: 600;
     color: var(--text-primary);
-    font-size: 1.0625rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .excel-format td {
-    padding: 1.25rem 0;
+    padding: 0.875rem 1rem 0.875rem 0;
     color: var(--text-secondary);
-    border-bottom: 1px solid rgba(147, 105, 84, 0.05);
-    font-size: 1.0625rem;
+    border-bottom: 1px solid rgba(147, 105, 84, 0.08);
+    font-size: 1rem;
 }
 
 .excel-format tbody tr:last-child td {
@@ -808,6 +768,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
     .hero {
         padding: 6rem 0 4rem;
     }
@@ -855,31 +819,34 @@ footer {
     }
 
     .page-hero {
-        padding: 6rem 0 3rem;
+        padding: 6rem 0 2rem;
     }
 
     .page-hero h1 {
         font-size: 2rem;
     }
 
-    .feature-details {
-        grid-template-columns: 1fr;
+    .page-hero p {
+        font-size: 1rem;
     }
 
-    .guide-step {
-        flex-direction: column;
-        gap: 1rem;
+    .features-content,
+    .guide-content {
+        padding: 3rem 0;
     }
 
-    .best-practices-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .excel-format {
-        padding: 1rem;
+    .feature-section,
+    .guide-section {
+        margin-bottom: 3rem;
     }
 
     .cta-section h2 {
         font-size: 2rem;
+    }
+
+    .excel-format th,
+    .excel-format td {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+        font-size: 0.875rem;
     }
 }
