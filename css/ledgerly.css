@@ -500,33 +500,36 @@ footer {
 
 /* Page Hero (for subpages) */
 .page-hero {
-    padding: 8rem 0 4rem;
+    padding: 12rem 0 6rem;
     text-align: center;
-    margin-top: 60px;
-    background: var(--window-main);
-    border-bottom: 1px solid rgba(147, 105, 84, 0.1);
+    background: linear-gradient(180deg, var(--brand-bg) 0%, var(--window-main) 100%);
 }
 
 .page-hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
 }
 
 .page-hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Features Content */
 .features-content {
-    padding: 6rem 0;
+    padding: 8rem 0;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .feature-section {
-    margin-bottom: 6rem;
+    margin-bottom: 12rem;
 }
 
 .feature-section:last-child {
@@ -534,70 +537,86 @@ footer {
 }
 
 .feature-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.feature-header i {
-    font-size: 3rem;
-    color: var(--brand-primary);
-    margin-bottom: 1.5rem;
-    display: block;
+    margin-bottom: 5rem;
 }
 
 .feature-header h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
 }
 
-.feature-details {
+.feature-header p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    gap: 4rem;
 }
 
-.feature-detail h3 {
-    font-size: 1.375rem;
+.feature-item {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(147, 105, 84, 0.1);
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.feature-item h3 {
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
-.feature-detail p {
+.feature-item p {
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
 }
 
-.feature-detail ul {
+.feature-item ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    gap: 0.75rem;
 }
 
-.feature-detail li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
+.feature-item li {
     color: var(--text-secondary);
+    font-size: 1.0625rem;
+    padding-left: 2rem;
+    position: relative;
 }
 
-.feature-detail li::before {
-    content: "•";
+.feature-item li::before {
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--brand-primary);
-    font-weight: bold;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background: var(--brand-primary);
+    border-radius: 50%;
 }
 
 /* Guide Content */
 .guide-content {
-    padding: 6rem 0;
+    padding: 8rem 0;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 .guide-section {
-    margin-bottom: 6rem;
+    margin-bottom: 12rem;
 }
 
 .guide-section:last-child {
@@ -605,63 +624,58 @@ footer {
 }
 
 .guide-section h2 {
-    font-size: 2.25rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 3rem;
-    letter-spacing: -0.02em;
+    margin-bottom: 5rem;
+    letter-spacing: -0.03em;
 }
 
 .guide-step {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
-.step-number {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    background: var(--brand-primary);
-    color: var(--text-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.25rem;
+.guide-step:last-child {
+    margin-bottom: 0;
 }
 
 .step-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .step-content p {
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
 }
 
 .step-content ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    gap: 0.75rem;
 }
 
 .step-content li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
     color: var(--text-secondary);
+    font-size: 1.0625rem;
+    padding-left: 2rem;
+    position: relative;
 }
 
 .step-content li::before {
-    content: "→";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--brand-primary);
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    background: var(--brand-primary);
+    border-radius: 50%;
 }
 
 .step-content strong {
@@ -672,28 +686,17 @@ footer {
 /* Best Practices Grid */
 .best-practices-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
 }
 
 .practice-card {
-    background: var(--window-main);
-    border: 1px solid rgba(147, 105, 84, 0.15);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-}
-
-.practice-card i {
-    font-size: 2.5rem;
-    color: var(--brand-primary);
-    margin-bottom: 1rem;
-    display: block;
+    padding: 0;
 }
 
 .practice-card h3 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.75rem;
@@ -701,16 +704,13 @@ footer {
 
 .practice-card p {
     color: var(--text-secondary);
-    font-size: 0.9375rem;
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    line-height: 1.7;
 }
 
 /* Excel Format Table */
 .excel-format {
-    background: var(--window-main);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     overflow-x: auto;
 }
 
@@ -720,21 +720,22 @@ footer {
 }
 
 .excel-format thead {
-    border-bottom: 2px solid rgba(147, 105, 84, 0.2);
+    border-bottom: 1px solid rgba(147, 105, 84, 0.2);
 }
 
 .excel-format th {
     text-align: left;
-    padding: 1rem;
+    padding: 1.25rem 0;
     font-weight: 600;
     color: var(--text-primary);
-    font-size: 0.9375rem;
+    font-size: 1.0625rem;
 }
 
 .excel-format td {
-    padding: 1rem;
+    padding: 1.25rem 0;
     color: var(--text-secondary);
-    border-bottom: 1px solid rgba(147, 105, 84, 0.1);
+    border-bottom: 1px solid rgba(147, 105, 84, 0.05);
+    font-size: 1.0625rem;
 }
 
 .excel-format tbody tr:last-child td {
