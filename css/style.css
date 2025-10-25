@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-color: #2563eb;
     --primary-hover: #1d4ed8;
@@ -237,6 +241,15 @@ main {
 .platform-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.platform-icon i {
+    transition: transform 0.3s ease;
+}
+
+.platform-card:hover .platform-icon i {
+    transform: scale(1.1);
 }
 
 .platform-card h3 {
@@ -398,4 +411,30 @@ footer a:hover {
 
 .system-requirements li {
     padding: 0.25rem 0;
+}
+
+/* Smooth Scroll Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.app-card:nth-child(2) {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.intro {
+    animation: fadeInUp 0.6s ease-out;
 }

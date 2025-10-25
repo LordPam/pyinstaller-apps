@@ -156,6 +156,15 @@ main {
 .platform-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--brand-primary);
+}
+
+.platform-icon i {
+    transition: transform 0.3s ease;
+}
+
+.platform-card:hover .platform-icon i {
+    transform: scale(1.1);
 }
 
 .platform-card h3 {
