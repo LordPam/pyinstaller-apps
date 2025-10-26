@@ -1,6 +1,6 @@
 /* Ledgerly - Apple-Inspired Design */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&display=swap');
 
 /* Color Variables */
 :root {
@@ -76,6 +76,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
     color: var(--text-primary);
@@ -131,6 +132,7 @@ body {
 }
 
 .hero h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     font-weight: 700;
     color: var(--text-primary);
