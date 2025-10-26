@@ -38,10 +38,15 @@
     <section class="guide-content">
         <div class="container">
             <!-- Getting Started -->
-            <div class="guide-section">
-                <h2>Getting Started</h2>
+            <div class="guide-section" data-scroll-section>
+                <div class="section-header-with-icon">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h2>Getting Started</h2>
+                </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>First Launch</h3>
@@ -57,10 +62,15 @@
             </div>
 
             <!-- Adding Transactions -->
-            <div class="guide-section">
-                <h2>Adding Transactions</h2>
+            <div class="guide-section" data-scroll-section>
+                <div class="section-header-with-icon">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-plus-circle"></i>
+                    </div>
+                    <h2>Adding Transactions</h2>
+                </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Select Transaction Type</h3>
@@ -68,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Fill in Details</h3>
@@ -83,7 +93,7 @@
                     </div>
                 </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Review and Confirm</h3>
@@ -93,10 +103,15 @@
             </div>
 
             <!-- Viewing Data -->
-            <div class="guide-section">
-                <h2>Viewing Your Data</h2>
+            <div class="guide-section" data-scroll-section>
+                <div class="section-header-with-icon">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h2>Viewing Your Data</h2>
+                </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Current Balance</h3>
@@ -104,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Recent Transactions</h3>
@@ -114,10 +129,15 @@
             </div>
 
             <!-- Reports -->
-            <div class="guide-section">
-                <h2>Generating Reports</h2>
+            <div class="guide-section" data-scroll-section>
+                <div class="section-header-with-icon">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h2>Generating Reports</h2>
+                </div>
 
-                <div class="guide-step">
+                <div class="guide-step" data-scroll-step>
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Visual Reports</h3>
@@ -134,36 +154,41 @@
             </div>
 
             <!-- Best Practices -->
-            <div class="guide-section">
-                <h2>Best Practices</h2>
+            <div class="guide-section" data-scroll-section>
+                <div class="section-header-with-icon">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h2>Best Practices</h2>
+                </div>
 
                 <div class="best-practices-grid">
-                    <div class="practice-card">
+                    <div class="practice-card" data-scroll-card>
                         <h3>Enter Regularly</h3>
                         <p>Add transactions daily or weekly to avoid backlog and maintain accurate records.</p>
                     </div>
 
-                    <div class="practice-card">
+                    <div class="practice-card" data-scroll-card>
                         <h3>Use Categories</h3>
                         <p>Consistent categorization makes your reports much more useful for analysis.</p>
                     </div>
 
-                    <div class="practice-card">
+                    <div class="practice-card" data-scroll-card>
                         <h3>Review Confirmations</h3>
                         <p>Always check the confirmation dialog carefully before clicking "Yes".</p>
                     </div>
 
-                    <div class="practice-card">
+                    <div class="practice-card" data-scroll-card>
                         <h3>Backup Regularly</h3>
                         <p>Keep backups of your Excel file. OneDrive and iCloud backup automatically.</p>
                     </div>
 
-                    <div class="practice-card">
+                    <div class="practice-card" data-scroll-card>
                         <h3>Close Excel</h3>
                         <p>Don't open the Excel file in other programs while using Ledgerly.</p>
                     </div>
 
-                    <div class="practice-card">
+                    <div class="practice-card" data-scroll-card>
                         <h3>Verify Balance</h3>
                         <p>After adding transactions, check the balance matches your expectations.</p>
                     </div>
@@ -171,8 +196,13 @@
             </div>
 
             <!-- Excel Format -->
-            <div class="guide-section">
-                <h2>Excel File Format</h2>
+            <div class="guide-section" data-scroll-section>
+                <div class="section-header-with-icon">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-table"></i>
+                    </div>
+                    <h2>Excel File Format</h2>
+                </div>
                 <p>Ledgerly manages your Excel file automatically. Each sheet contains these columns:</p>
 
                 <div class="excel-format">
@@ -265,6 +295,7 @@
     </footer>
 
     <script>
+        // Shrinking navigation on scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 50) {
@@ -273,6 +304,31 @@
                 navbar.classList.remove('scrolled');
             }
         });
+
+        // Scroll reveal animations for guide
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        // Observer for sections
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    // Also reveal all steps within the section
+                    const steps = entry.target.querySelectorAll('[data-scroll-step]');
+                    steps.forEach(step => step.classList.add('revealed'));
+                    // Reveal practice cards
+                    const cards = entry.target.querySelectorAll('[data-scroll-card]');
+                    cards.forEach(card => card.classList.add('revealed'));
+                }
+            });
+        }, observerOptions);
+
+        // Observe all guide sections
+        const guideSections = document.querySelectorAll('[data-scroll-section]');
+        guideSections.forEach(section => sectionObserver.observe(section));
     </script>
 </body>
 </html>

@@ -642,6 +642,14 @@ footer {
     margin-bottom: 4rem;
     padding-bottom: 4rem;
     border-bottom: 1px solid rgba(147, 105, 84, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.guide-section.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .guide-section:last-child {
@@ -650,11 +658,35 @@ footer {
     border-bottom: none;
 }
 
+.section-header-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.section-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--brand-secondary) 0%, #5a6559 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.section-icon i {
+    font-size: 1.375rem;
+    color: var(--text-primary);
+}
+
 .guide-section h2 {
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 2rem;
+    margin: 0;
     letter-spacing: -0.01em;
 }
 
@@ -670,7 +702,20 @@ footer {
     gap: 1.5rem;
     margin-bottom: 2rem;
     align-items: flex-start;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.guide-step.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.guide-step:nth-child(2) { transition-delay: 0.1s; }
+.guide-step:nth-child(3) { transition-delay: 0.2s; }
+.guide-step:nth-child(4) { transition-delay: 0.3s; }
+.guide-step:nth-child(5) { transition-delay: 0.4s; }
 
 .guide-step:last-child {
     margin-bottom: 0;
@@ -678,17 +723,24 @@ footer {
 
 .step-number {
     flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    background: var(--brand-primary);
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--brand-primary) 0%, #a47762 100%);
     color: var(--text-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.9375rem;
     margin-top: 0.125rem;
+    box-shadow: 0 2px 8px rgba(147, 105, 84, 0.2);
+    transition: all 0.3s ease;
+}
+
+.guide-step:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(147, 105, 84, 0.3);
 }
 
 .step-content {
@@ -714,6 +766,9 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0.75rem 0 0 0;
+    background: rgba(39, 42, 40, 0.3);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
 }
 
 .step-content li {
@@ -722,13 +777,17 @@ footer {
     padding-left: 1.25rem;
     position: relative;
     line-height: 1.7;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-content li:last-child {
+    margin-bottom: 0;
 }
 
 .step-content li::before {
-    content: "•";
+    content: "→";
     position: absolute;
-    left: 0.25rem;
+    left: 0;
     color: var(--brand-primary);
     font-weight: bold;
 }
@@ -742,12 +801,36 @@ footer {
 .best-practices-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 2.5rem;
+    gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .practice-card {
-    padding: 0;
+    padding: 1.25rem;
+    background: rgba(39, 42, 40, 0.3);
+    border: 1px solid rgba(147, 105, 84, 0.15);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.practice-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.practice-card:nth-child(1) { transition-delay: 0.1s; }
+.practice-card:nth-child(2) { transition-delay: 0.2s; }
+.practice-card:nth-child(3) { transition-delay: 0.3s; }
+.practice-card:nth-child(4) { transition-delay: 0.4s; }
+.practice-card:nth-child(5) { transition-delay: 0.5s; }
+.practice-card:nth-child(6) { transition-delay: 0.6s; }
+
+.practice-card:hover {
+    background: rgba(39, 42, 40, 0.5);
+    border-color: rgba(147, 105, 84, 0.3);
+    transform: translateY(-2px);
 }
 
 .practice-card h3 {
@@ -755,14 +838,24 @@ footer {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .practice-card h3::before {
     content: "✓";
-    display: inline-block;
-    color: var(--brand-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: var(--brand-primary);
+    border-radius: 50%;
+    color: var(--text-primary);
     font-weight: bold;
-    margin-right: 0.5rem;
+    font-size: 0.75rem;
+    flex-shrink: 0;
 }
 
 .practice-card p {
@@ -775,6 +868,10 @@ footer {
 .excel-format {
     margin-top: 1.5rem;
     overflow-x: auto;
+    background: rgba(39, 42, 40, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(147, 105, 84, 0.15);
 }
 
 .excel-format table {
@@ -783,12 +880,12 @@ footer {
 }
 
 .excel-format thead {
-    border-bottom: 2px solid rgba(147, 105, 84, 0.25);
+    border-bottom: 2px solid rgba(147, 105, 84, 0.3);
 }
 
 .excel-format th {
     text-align: left;
-    padding: 0.625rem 1.5rem 0.625rem 0;
+    padding: 0.75rem 1.5rem 0.75rem 0;
     font-weight: 600;
     color: var(--text-primary);
     font-size: 0.8125rem;
@@ -797,15 +894,28 @@ footer {
 }
 
 .excel-format td {
-    padding: 0.75rem 1.5rem 0.75rem 0;
+    padding: 0.875rem 1.5rem 0.875rem 0;
     color: var(--text-secondary);
-    border-bottom: 1px solid rgba(147, 105, 84, 0.08);
+    border-bottom: 1px solid rgba(147, 105, 84, 0.1);
     font-size: 0.9375rem;
     line-height: 1.6;
 }
 
+.excel-format td:first-child {
+    font-weight: 600;
+    color: var(--brand-primary);
+}
+
 .excel-format tbody tr:last-child td {
     border-bottom: none;
+}
+
+.excel-format tbody tr {
+    transition: background 0.2s ease;
+}
+
+.excel-format tbody tr:hover {
+    background: rgba(147, 105, 84, 0.05);
 }
 
 /* CTA Section */
