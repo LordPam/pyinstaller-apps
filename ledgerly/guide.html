@@ -305,7 +305,7 @@
             }
         });
 
-        // Scroll reveal animations for guide
+        // Scroll reveal animations for guide - bidirectional
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -315,13 +315,19 @@
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // Scrolling into view - reveal section and contents
                     entry.target.classList.add('revealed');
-                    // Also reveal all steps within the section
                     const steps = entry.target.querySelectorAll('[data-scroll-step]');
                     steps.forEach(step => step.classList.add('revealed'));
-                    // Reveal practice cards
                     const cards = entry.target.querySelectorAll('[data-scroll-card]');
                     cards.forEach(card => card.classList.add('revealed'));
+                } else {
+                    // Scrolling out of view - hide for re-animation
+                    entry.target.classList.remove('revealed');
+                    const steps = entry.target.querySelectorAll('[data-scroll-step]');
+                    steps.forEach(step => step.classList.remove('revealed'));
+                    const cards = entry.target.querySelectorAll('[data-scroll-card]');
+                    cards.forEach(card => card.classList.remove('revealed'));
                 }
             });
         }, observerOptions);

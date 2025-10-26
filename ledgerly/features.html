@@ -180,7 +180,7 @@
             }
         });
 
-        // Scroll reveal animation for features
+        // Scroll reveal animation for features - bidirectional
         const observerOptions = {
             threshold: 0.15,
             rootMargin: '0px 0px -50px 0px'
@@ -189,13 +189,11 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // Scrolling into view - reveal
                     entry.target.classList.add('revealed');
                 } else {
-                    // Optional: remove class when scrolling up past the element
-                    // This creates the "shrink and disappear" effect
-                    if (entry.boundingClientRect.top > 0) {
-                        entry.target.classList.remove('revealed');
-                    }
+                    // Scrolling out of view - hide for re-animation
+                    entry.target.classList.remove('revealed');
                 }
             });
         }, observerOptions);
@@ -209,10 +207,12 @@
         featureSections.forEach(section => {
             const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                    if (!entry.isIntersecting) {
+                        // Out of view - subtle fade and scale
                         entry.target.style.opacity = '0.3';
                         entry.target.style.transform = 'scale(0.98)';
                     } else {
+                        // In view - full visibility
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'scale(1)';
                     }
