@@ -44,15 +44,24 @@
                     <p>Your financial data stays on your computer. No exceptions.</p>
                 </div>
                 <div class="feature-grid">
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-hard-drive"></i>
+                        </div>
                         <h3>100% Local Storage</h3>
                         <p>All data is stored locally on your machine. No cloud sync, no external servers, no data collection. Your finances are completely private.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
                         <h3>Excel-Based</h3>
                         <p>Data is stored in standard Excel files that you control. Place them anywhere—desktop, OneDrive, external drive. Easy to backup and migrate.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-plug-circle-xmark"></i>
+                        </div>
                         <h3>Works Offline</h3>
                         <p>No internet connection required. No API calls, no telemetry, no tracking. Complete independence.</p>
                     </div>
@@ -66,15 +75,24 @@
                     <p>Everything you need to manage club finances effectively.</p>
                 </div>
                 <div class="feature-grid">
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
                         <h3>Multiple Expense Sheets</h3>
                         <p>Organize finances across different categories. Create sheets for actual expenses, planned budgets, specific trips, or custom needs.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
                         <h3>Transaction Management</h3>
                         <p>Add income and expenses with clear visual indicators. Real-time validation, auto-filled dates, running balances, and transaction history.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
                         <h3>Visual Reports</h3>
                         <p>Interactive pie charts, line graphs, and monthly summaries. Export professional markdown reports for sharing with members.</p>
                     </div>
@@ -88,15 +106,24 @@
                     <p>Multiple layers of validation prevent costly mistakes.</p>
                 </div>
                 <div class="feature-grid">
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
                         <h3>Transaction Validation</h3>
                         <p>Color-coded buttons (green for income, red for expenses) with confirmation dialogs showing all details before saving.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
                         <h3>Amount Checking</h3>
                         <p>Real-time validation as you type. Decimal place checking, warnings for unusual amounts, prevention of negative values.</p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item" data-scroll-reveal>
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
                         <h3>Data Integrity</h3>
                         <p>Date format validation, required field checking, and Excel file lock detection ensure your data stays accurate.</p>
                     </div>
@@ -143,6 +170,7 @@
     </footer>
 
     <script>
+        // Shrinking navigation on scroll
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 50) {
@@ -150,6 +178,48 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Scroll reveal animation for features
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                } else {
+                    // Optional: remove class when scrolling up past the element
+                    // This creates the "shrink and disappear" effect
+                    if (entry.boundingClientRect.top > 0) {
+                        entry.target.classList.remove('revealed');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature items
+        const featureItems = document.querySelectorAll('[data-scroll-reveal]');
+        featureItems.forEach(item => observer.observe(item));
+
+        // Also observe feature sections for subtle effects
+        const featureSections = document.querySelectorAll('.feature-section');
+        featureSections.forEach(section => {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting && entry.boundingClientRect.top > 0) {
+                        entry.target.style.opacity = '0.3';
+                        entry.target.style.transform = 'scale(0.98)';
+                    } else {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'scale(1)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sectionObserver.observe(section);
         });
     </script>
 </body>
